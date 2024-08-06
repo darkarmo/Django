@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.shortcuts import HttpResponse
+def index_view(request):
+    return HttpResponse("<h1>This is index page</h1>")
+def login(request):
+    return HttpResponse("<h1>This is login page</h1>")
+def reg(request):
+    return HttpResponse("This is register page")
 
+    
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',index_view),
+    path('login/',login),
+    path('register/',reg)
 ]
