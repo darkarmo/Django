@@ -3,9 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Home Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    /* styles.css */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-family: 'Arial, sans-serif';
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Our Website</h1>
+            <p>This is the home page with dynamic CSS and designs.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Information about the website or company.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Details about services offered.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ways to get in touch with us.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dynamic Home Page</p>
+    </footer>
+    <script>
+        // scripts.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const changeThemeButton = document.createElement('button');
+    changeThemeButton.textContent = 'Change Theme';
+    changeThemeButton.style.padding = '0.5rem 1rem';
+    changeThemeButton.style.margin = '1rem';
+    document.body.prepend(changeThemeButton);
+
+    changeThemeButton.addEventListener('click', () => {
+        const rootStyles = document.documentElement.style;
+        rootStyles.setProperty('--primary-color', getRandomColor());
+        rootStyles.setProperty('--secondary-color', getRandomColor());
+    });
+});
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+    </script>
 </body>
 </html>
