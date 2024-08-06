@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse,render
 def index_view(request):
-    return HttpResponse("<h1>This is index page</h1>")
+    return render(request,"index.html")
+    #return HttpResponse("<h1>This is index page</h1>")
 def login(request):
     return HttpResponse("<h1>This is login page</h1>")
 def reg(request):
