@@ -20,10 +20,8 @@ from django.shortcuts import HttpResponse,render
 def index_view(request):
     return render(request,"index.html")
     #return HttpResponse("<h1>This is index page</h1>")
-def homepage(request):
-    return render(request,"homepage.html")
 def login(request):
-    return render("<h1>This is login page</h1>")
+    return render(request,"login.html")
 def reg(request):
     return HttpResponse("This is register page")
 
@@ -31,7 +29,6 @@ def reg(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index_view),
-    path('homepage/',homepage),
     path('login/',login),
     path('register/',reg)
 ]
