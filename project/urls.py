@@ -21,7 +21,7 @@ def index_view(request):
     return render(request,"index.html")
     #return HttpResponse("<h1>This is index page</h1>")
 def login(request):
-    return render(request,"login.html")
+    return render(request,"login.html",{"name":"Hyu Jack","age":"100"})
 def reg(request):
     return HttpResponse("This is register page")
 
