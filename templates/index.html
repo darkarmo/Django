@@ -79,6 +79,11 @@ footer {
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+          <h1>{{hobbies}}</h1>  
+            <ul>
+                {%for h in hobbies%}
+                    <li>{{h}}</li>
+                {% endfor %}
         </nav>
     </header>
     <main>
@@ -88,7 +93,13 @@ footer {
         </section>
         <section id="about">
             <h2>About Us</h2>
-            <p>Information about the website or company.</p>
+            <p>
+                {% if is_adult == True %}
+                <h3>You are an adult!</h3>
+                {% else %}
+                <h3>You are underage</h3>
+                {% endif %}
+            </p>
         </section>
         <section id="services">
             <h2>Our Services</h2>
