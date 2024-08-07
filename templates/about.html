@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #444;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .member {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .member:hover {
+            transform: translateY(-10px);
+        }
+        .member img {
+            width: 100%;
+            height: auto;
+        }
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .member-info h2 {
+            margin: 0;
+            color: #333;
+        }
+        .member-info p {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="team">
+            <div class="member">
+                <img src="https://via.placeholder.com/300x200" alt="Member 1">
+                <div class="member-info">
+                    <h2>John Doe</h2>
+                    <p>CEO</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/300x200" alt="Member 2">
+                <div class="member-info">
+                    <h2>Jane Smith</h2>
+                    <p>CTO</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/300x200" alt="Member 3">
+                <div class="member-info">
+                    <h2>Sam Brown</h2>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/300x200" alt="Member 4">
+                <div class="member-info">
+                    <h2>Emily White</h2>
+                    <p>Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
